@@ -7,7 +7,10 @@ pipeline {
             }
         }
         stage('Build') {
-            when { equals expected: true, actual: Deploy }
+            input {
+                message "Deploy to production?"
+                id "simple-input"
+            }
             steps {
                 echo 'Building the app'
             }
