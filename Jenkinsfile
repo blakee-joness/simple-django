@@ -7,6 +7,7 @@ pipeline {
             }
         }
         stage('Build') {
+            when { equals expected: true, actual: Deploy }
             steps {
                 echo 'Building the app'
             }
