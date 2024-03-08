@@ -7,10 +7,6 @@ pipeline {
             }
         }
         stage('Build') {
-            input {
-                message "Deploy to production?"
-                id "simple-input"
-            }
             steps {
                 echo 'Building the app'
             }
