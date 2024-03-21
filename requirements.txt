@@ -9,7 +9,7 @@ cssbeautifier==1.14.8
 debugpy==1.6.7
 dill==0.3.6
 distlib==0.3.6
-Django==4.2.3
+Django==5.0.3
 djlint==1.31.1
 EditorConfig==0.12.3
 filelock==3.12.2
