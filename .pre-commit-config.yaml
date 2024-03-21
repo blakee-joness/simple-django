@@ -24,6 +24,7 @@ repos:
         language: system
         types: [python]
         exclude: &python_excludes migrations/
+        args: ["--rc-file=.pylintrc"]
   - repo: https://github.com/psf/black
     rev: 23.3.0
     hooks:

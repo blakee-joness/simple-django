@@ -9,4 +9,5 @@ class Homepage(TemplateView):
     template_name = "main/home.html"
 
     def get(self, *args, **kwargs):
+        """Get method for Homepage view"""
         return super().get(self.request)
