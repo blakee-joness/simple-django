@@ -1,3 +1,5 @@
+from typing import Any
+
 from django.views.generic import TemplateView
 
 
@@ -8,6 +10,10 @@ class Homepage(TemplateView):
     http_method_names = ["get"]
     template_name = "main/home.html"
 
-    def get(self, *args, **kwargs):
-        """Get method for Homepage view"""
-        return super().get(self.request)
+    def get_context_data(self, **kwargs) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
